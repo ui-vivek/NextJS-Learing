@@ -8,6 +8,7 @@ const Home = () => {
     setNum(num + 1);
   };
   function InComp(props:any){
+    console.log("props", props);
     return (
       <div>
       <p>THIS IS INNER COMPONENT : {props.number} ,,, {typeof(props) == "number" ? props : "Na"}</p>

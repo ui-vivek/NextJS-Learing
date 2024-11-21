@@ -7,9 +7,9 @@ export default function Middleware(req: any) {
   //   }
 
   //   This will take the config and if there is any URL match with the config then it will redirect to item page.
-  return NextResponse.redirect(new URL("/item", req.url));
+  // return NextResponse.redirect(new URL("/item", req.url));
 }
 
 export const config = {
-  matcher: ["/about/:path*", "/anyURL/:path*"], // star (*) means -> it will redirect to all the child routes also.
+  // matcher: ["/about/:path*", "/anyURL/:path*"], // star (*) means -> it will redirect to all the child routes also.
 };

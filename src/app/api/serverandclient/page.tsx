@@ -16,6 +16,10 @@ const setNumber = (btn:string) => {
 }
   return (
     <div>
+      <div>
+      <h1>This page is client side but also use the server side rendering.</h1>
+      <h2>We used server component inside client component.</h2>
+      </div>
       <h1>LCM And GCD</h1>
       <h3>
         Given two integers a and b, write a function lcmAndGcd() to compute
