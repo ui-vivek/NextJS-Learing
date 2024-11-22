@@ -1,7 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
-  // "rules": {
-  //   "@typescript-eslint/no-explicit-any": "off", // Turn off this rule
-  //   "prefer-const": "off" // Disable 'prefer-const' globally
-  // }
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off", // Turn off this rule
+    "prefer-const": "off" // Disable 'prefer-const' globally
+  }
 }
