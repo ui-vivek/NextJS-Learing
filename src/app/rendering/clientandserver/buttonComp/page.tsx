@@ -1,0 +1,10 @@
+"use client"
+
+export default  function ButtonComp({num}:any) {
+    console.log("i am button from client",num)
+  return (
+    <div>
+      <button onClick={()=>alert(`This data is passed from server component = ${num}`)}>Call Client</button>
+    </div>
+  )
+}
