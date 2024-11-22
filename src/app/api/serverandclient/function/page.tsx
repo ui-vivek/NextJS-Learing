@@ -1,6 +1,9 @@
 export default function FunctionforLCMandGCD(params: any) {
-    let a = params.nums[0];
-    let b = params.nums[1];
+  if(params){
+    console.log("Hye this is only to test the production build and also i have assinged the default values of a and b")
+  }
+    let a = 5;
+    let b = 8;
 
     function gcd(a: number, b: number): number {
         if (b === 0) {

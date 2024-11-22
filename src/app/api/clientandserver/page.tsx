@@ -6,7 +6,7 @@ const ClientAndServer = () => {
     <div>
       <h1>This page is server side but also use the client side rendering.</h1>
       <h2>We used client component inside server component.</h2>
-      <ButtonComp num={["60",60,"ABC"]}/>
+      <ButtonComp num="50"/>
     </div>
   )
 }

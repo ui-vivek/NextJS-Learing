@@ -1,6 +1,6 @@
 "use client"
 
-function ButtonComp({num}:any) {
+export default  function ButtonComp({num}:any) {
     console.log("i am button from client",num)
   return (
     <div>
@@ -8,5 +8,3 @@ function ButtonComp({num}:any) {
     </div>
   )
 }
-
-export default ButtonComp;
