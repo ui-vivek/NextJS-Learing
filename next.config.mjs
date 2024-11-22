@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+    basePath: process.env.NODE_ENV == "development" ? '/dev' : '/api',
     // output: 'export',
     /**
      * Set the output type for static file generation during npm run build.
