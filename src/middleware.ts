@@ -1,7 +1,7 @@
 // import { NextResponse } from "next/server";
 export default function Middleware(req: any) {
   if(req){
-    console.log("Hye")
+    // console.log("Hye")
   }
 
   //If the router is about or start with about with will redirect to item page.
