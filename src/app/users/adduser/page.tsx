@@ -1,6 +1,7 @@
 "use client"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './style.css'
+import { Users } from '@/utils/users';
 export default function Page() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -41,7 +42,13 @@ export default function Page() {
                     setUsers(json)
                 }
             })
-            .catch((err)=>console.log("bad",err))
+            .catch((err)=>console.log(err))
+
+        useEffect(()=>{
+            console.log(Users)
+            let data:any = Users;
+            setUsers(data)
+        },[users])
     }
     return (<div>
         <h1>This Is The Add Users Details Page.</h1>
