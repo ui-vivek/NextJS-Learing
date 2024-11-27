@@ -16,4 +16,5 @@ export async function GET(){
     // const users  = await getUsersLists();
     // return new Response("Hello, This is the API test using NEXT.JS")
     // return NextResponse.json(users)
+    return NextResponse.json("API IS CALLED")
 }

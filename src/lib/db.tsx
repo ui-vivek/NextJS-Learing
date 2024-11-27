@@ -1,7 +1,6 @@
 import chalk from "chalk";
 import mongoose from "mongoose";
-const db_URI = 'mongodb://localhost:27017/NextJS';
-
+const db_URI:any = process.env.NODE_ENV == "development" ? 'mongodb://localhost:27017/NextJS' : process.env.DB_URI;
 export async function db() {
   try {
     await mongoose.connect(db_URI);
