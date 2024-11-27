@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 
 export default function Page() {
     const [users, setUsers] = useState([])
+    // let BASE_URL =  process.env.BASE_URL
     useEffect(() => {
         const fetchData = async () => {
             const basePath = process.env.NODE_ENV == "development" ? '/dev' : '/app';
@@ -22,7 +23,7 @@ export default function Page() {
             <h1>Users List:</h1>
             {users.length ? users.map((user: any) => (
                 <div key={user._id}>
-                    <Link href={`/users/${user.Email}`}>{user.Name}</Link>
+                    <Link href={`/users/${user._id}`}>{user.Name}</Link>
                     <br />
                 </div>)) : null}
         </div>

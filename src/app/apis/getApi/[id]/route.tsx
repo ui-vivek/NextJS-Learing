@@ -5,12 +5,13 @@ import { UsersList } from "@/lib/models/users";
 
  export async function GET(req:any,cont:any){
     let id = cont.params.id;
+    console.log("cccccccccccccccccccccccccccccccc",cont)
     // const data = await getUsersLists();
     // const user = data.find((user:any) => user.id == id);
     // return NextResponse.json(user ? user : {msg:"User Not found"})
     try {
         await db()
-        let user = await UsersList.find({userId:id});
+        let user = await UsersList.find({_id:id});
         if(!user.length){
             return NextResponse.json("User Not Found!",{status:400})
         }

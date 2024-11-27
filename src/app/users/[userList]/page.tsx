@@ -2,6 +2,7 @@
 
 // Now using the API of Next.js to show the user details
 export default async function Page(props: any){
+    // let BASE_URL =  process.env.BASE_URL
     const userId = props.params.userList;
     const basePath = process.env.NODE_ENV == "development" ? '/dev' : '/app';
     let response = await fetch(basePath+`/apis/getApi/${userId}`);
@@ -10,17 +11,18 @@ export default async function Page(props: any){
         return;
     }
     let data = await response.json();
+    data = data[0];
     return (
         <>
          <div>
-            <h1>Hello,{data.name}</h1>
-            <h5>{data.username}</h5>
-            <h5>{data.email}</h5>
-            <h5>{data.phone}</h5>
-            <h5>{data.website}</h5>
-            <h4>company: {data.company.name}</h4>
-            <h4>company: {data.company.catchPhrase}</h4>
-            <h4>company: {data.company.bs}</h4>
+            <h1>Hello,{data.Name}</h1>
+            {/* <h5>{data.username}</h5> */}
+            <h5>{data.Email}</h5>
+            {/* <h5>{data.phone}</h5> */}
+            {/* <h5>{data.website}</h5> */}
+            {/* <h4>company: {data.company.name}</h4> */}
+            {/* <h4>company: {data.company.catchPhrase}</h4> */}
+            {/* <h4>company: {data.company.bs}</h4> */}
         </div>
         </>
     )

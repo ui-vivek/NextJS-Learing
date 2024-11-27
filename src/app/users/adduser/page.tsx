@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import './style.css'
 import { Users } from '@/utils/users';
 export default function Page() {
+    // let BASE_URL =  process.env.BASE_URL
+
     const basePath = process.env.NODE_ENV == "development" ? '/dev' : '/app';
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
