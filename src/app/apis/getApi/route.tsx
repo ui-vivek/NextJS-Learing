@@ -10,11 +10,12 @@ export async function GET(){
         if(usersList.length){
             return NextResponse.json(usersList,{status:200})
         }
+        return NextResponse.json("Users not fond",{status:200})
     } catch (error) {
         console.log("error",error)
+        return NextResponse.json("Someting Error",{status:200})
     }
     // const users  = await getUsersLists();
     // return new Response("Hello, This is the API test using NEXT.JS")
     // return NextResponse.json(users)
-    return NextResponse.json("API IS CALLED")
 }

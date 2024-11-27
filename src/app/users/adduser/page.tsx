@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './style.css'
 import { Users } from '@/utils/users';
 export default function Page() {
+    const basePath = process.env.NODE_ENV == "development" ? '/dev' : '/app';
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,7 +15,7 @@ export default function Page() {
         let data:any = Users;
         setUsers(data)
     },[users])
-    
+
     const submit = async (event: any) => {
         event.preventDefault()
         if (!password || !confirmPassword || !name || !email) {
@@ -25,7 +26,7 @@ export default function Page() {
             return;
 
         }
-        await fetch('http://localhost:3000/dev/apis/postApi', {
+        await fetch(basePath+'/apis/postApi', {
             method: 'POST',
             body: JSON.stringify({
                 Name: name,

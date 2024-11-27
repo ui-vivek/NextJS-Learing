@@ -3,7 +3,8 @@
 // Now using the API of Next.js to show the user details
 export default async function Page(props: any){
     const userId = props.params.userList;
-    let response = await fetch(`http://localhost:3000/dev/apis/getApi/${userId}`);
+    const basePath = process.env.NODE_ENV == "development" ? '/dev' : '/app';
+    let response = await fetch(basePath+`/apis/getApi/${userId}`);
     if (!response.ok) {
         console.error(`Failed to fetch user data for ID: ${userId}`);
         return;

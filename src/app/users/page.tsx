@@ -8,9 +8,11 @@ export default function Page() {
     const [users, setUsers] = useState([])
     useEffect(() => {
         const fetchData = async () => {
+            const basePath = process.env.NODE_ENV == "development" ? '/dev' : '/app';
             // const data = await getUsersLists();
-            let data:any = await fetch('http://localhost:3000/dev/apis/getApi');
+            let data:any = await fetch(basePath+'/apis/getApi');
             data = await data.json();
+            console.log(data)
             setUsers(data);
         }
         fetchData();
@@ -19,8 +21,8 @@ export default function Page() {
         <div>
             <h1>Users List:</h1>
             {users.length ? users.map((user: any) => (
-                <div key={user.id}>
-                    <Link href={`/users/${user.id}`}>{user.name}</Link>
+                <div key={user._id}>
+                    <Link href={`/users/${user.Email}`}>{user.Name}</Link>
                     <br />
                 </div>)) : null}
         </div>
