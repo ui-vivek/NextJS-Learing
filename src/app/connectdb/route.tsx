@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 import { UsersList } from "@/lib/models/users";
 import { NextResponse } from "next/server";
 
-export async function GET(request: any, params: any) {
+export async function GET() {
     await db()
     let users = await UsersList.find();
     console.log(users)

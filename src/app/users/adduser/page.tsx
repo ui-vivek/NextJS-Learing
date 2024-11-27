@@ -8,6 +8,13 @@ export default function Page() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [users, setUsers] = useState([]);
+
+    useEffect(()=>{
+        console.log(Users)
+        let data:any = Users;
+        setUsers(data)
+    },[users])
+    
     const submit = async (event: any) => {
         event.preventDefault()
         if (!password || !confirmPassword || !name || !email) {
@@ -44,11 +51,6 @@ export default function Page() {
             })
             .catch((err)=>console.log(err))
 
-        useEffect(()=>{
-            console.log(Users)
-            let data:any = Users;
-            setUsers(data)
-        },[users])
     }
     return (<div>
         <h1>This Is The Add Users Details Page.</h1>

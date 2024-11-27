@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { UsersList } from "@/lib/models/users";
-import { Users } from "@/utils/users";
+// import { Users } from "@/utils/users";
 import { NextResponse } from "next/server";
 
 export async function PUT(params: any, id: any) {

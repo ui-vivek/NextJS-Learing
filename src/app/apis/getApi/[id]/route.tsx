@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import getUsersLists from "../../../../../services/getUsersList";
+// import getUsersLists from "../../../../../services/getUsersList";
 import { db } from "@/lib/db";
 import { UsersList } from "@/lib/models/users";
 
