@@ -1,15 +1,21 @@
 "use client"
+import { deleteTodo, makeCompleted } from '@/app/redux/listSlice'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const TodoList = () => {
-  const listData:any = useSelector((data:any)=> data.list)
-  console.log(listData)
+  const listData: any = useSelector((data: any) => data.list)
+  const dispatch = useDispatch();
   return (
     <div>
       <h1>TO-DO List</h1>
-      {listData.map((listItem:any) => (
-        <div key={listItem.id}>{listItem.taskName}</div>
+      {listData.map((listItem: any) => (
+        <div key={listItem.id}>
+          <input type="checkbox" name="isCompleted" checked={listItem.isCompleted} />
+          <span>{listItem.taskName}</span>
+          <button onClick={() => dispatch(deleteTodo(listItem.id))}>Delete</button>
+          <button onClick={() => dispatch(makeCompleted(listItem.id))}>Done</button>
+        </div>
       ))}
     </div>
   )

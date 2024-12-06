@@ -1,6 +1,7 @@
 import React from 'react'
 import AddTodo from '../components/addTodo/page'
 import TodoList from '../components/todoLists/page'
+import Link from 'next/link'
 
 const Todo = () => {
     return (
@@ -10,6 +11,8 @@ const Todo = () => {
             <div style={{ top: '50px' }}>
                 <TodoList />
             </div>
+
+            <Link href={'/deletedtodos'}>Deleted List</Link>
         </div>
     )
 }

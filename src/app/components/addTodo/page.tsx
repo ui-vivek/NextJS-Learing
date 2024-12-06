@@ -15,8 +15,6 @@ const AddTodoList = () => {
             <form>
                 <input type="text" placeholder='add list item' onChange={(e) => setTaskName(e.target.value)} />
                 <button onClick={() => todoDispatch(event)}>Add</button>
-                <button>Delete</button>
-                <button>Complated</button>
             </form>
 
         </div>
