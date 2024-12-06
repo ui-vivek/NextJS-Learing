@@ -1,5 +1,5 @@
 "use client"
-import { useDispatch, useSelector } from 'react-redux'
+import {  useSelector } from 'react-redux'
 const Page = () => {
     const deletedList :any= useSelector((data:any)=> data.deletedList);
     console.log(deletedList)
