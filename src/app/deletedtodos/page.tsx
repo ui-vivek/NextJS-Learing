@@ -1,7 +1,7 @@
 "use client"
 import {  useSelector } from 'react-redux'
 const Page = () => {
-    const deletedList :any= useSelector((data:any)=> data.deletedList);
+    const deletedList :any= useSelector((data:any)=> data.listData.deletedList);
     console.log(deletedList)
   return (
     <ul>

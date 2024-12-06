@@ -4,7 +4,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 const TodoList = () => {
-  const listData: any = useSelector((data: any) => data.list)
+  const listData: any = useSelector((data: any) => data.listData.list)
   const dispatch = useDispatch();
   return (
     <div>
